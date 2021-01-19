@@ -1,10 +1,11 @@
 backend:
   name: github
   repo: LoboDeTerno/LoboDeTerno.github.io
-  branch: posts
+  branch: master
 
-media_folder: "/images/uploads"
-public_folder: "/static/images/uploads"
+media_folder: "static/imgages/uploads"
+public_folder: "/uploads"
+site_url: https://lobodeterno.github.io
 
 collections:
 
@@ -12,7 +13,7 @@ collections:
 
     label: "Post" # Used in the UI
 
-    folder: "content/post" # The path to the folder where the documents are stored
+    folder: "content/posts" # The path to the folder where the documents are stored
 
     create: true # Allow users to create new documents in this collection
 

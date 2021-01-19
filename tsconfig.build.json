@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "ESNext",
+        "strict": true,
+        "noEmit": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "noUnusedLocals": false,
+        "allowJs": true,
+        "checkJs": true
+    },
+    "include": ["postcss.config.js", "tailwind.config.js", "gatsby-config.js"],
+    "exclude": ["node_modules", "public", ".cache", "src"]
+}

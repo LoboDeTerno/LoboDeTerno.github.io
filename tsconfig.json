@@ -1,14 +1,17 @@
 {
     "compilerOptions": {
-      "module": "commonjs",
-      "target": "esnext",
-      "jsx": "react",
-      "lib": ["dom", "esnext"],
-      "strict": true,
-      "noEmit": true,
-      "isolatedModules": true,
-      "esModuleInterop": true,
-      "noUnusedLocals": false
+        "module": "ESNext",
+        "target": "esnext",
+        "moduleResolution": "Node",
+        "jsx": "react",
+        "lib": ["dom", "esnext"],
+        "strict": true,
+        "noEmit": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "noUnusedLocals": false,
+        "allowJs": true
     },
+    "include": ["src", "gatsby-browser.js"],
     "exclude": ["node_modules", "public", ".cache"]
-  }
+}
