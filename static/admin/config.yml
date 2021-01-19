@@ -1,0 +1,77 @@
+backend:
+  name: github
+  repo: LoboDeTerno/LoboDeTerno.github.io
+  branch: posts
+
+media_folder: "/images/uploads"
+public_folder: "/static/images/uploads"
+
+collections:
+
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+
+    label: "Post" # Used in the UI
+
+    folder: "content/post" # The path to the folder where the documents are stored
+
+    create: true # Allow users to create new documents in this collection
+
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+
+    fields: # The fields for each document, usually in front matter
+
+      - label: "Título"
+        name: "title"
+        widget: "string"
+
+      - label: "Data de Publicação"
+        name: "date"
+        required: false
+        widget: "datetime"
+
+      - label: "Esboço"
+        name: "draft"
+        required: false
+        widget: "boolean"
+        default: true
+
+      - label: "Catagorias"
+        name: "categories"
+        required: false
+        widget: "list"
+
+      - label: "Tags"
+        name: "tags"
+        required: false
+        widget: "list"
+
+      - label: "Palavras Chave"
+        name: "keywords"
+        required: false
+        widget: "list"
+
+      - label: "Auto Miniaturizar"
+        name: "autoThumbnailImage"
+        required: false
+        widget: "boolean"
+        default: true
+
+      - label: "Posição da Miniatura"
+        name: "thumbnailImagePosition"
+        required: false
+        widget: "select"
+        options: ["left", "top", "right"]
+
+      - label: "Miniatura"
+        name: "thumbnailImage"
+        required: false
+        widget: "image"
+
+      - label: "Imagem de Capa"
+        name: "coverImage"
+        required: false
+        widget: "image"
+
+      - label: "Corpo"
+        name: "body"
+        widget: "markdown"

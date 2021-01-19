@@ -3,6 +3,9 @@ module.exports = {
     title: "Lobo de Terno",
   },
   plugins: [
+    "gatsby-plugin-pnpm",
+    "gatsby-plugin-typescript",
+    "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-netlify-cms",
     {
       resolve: "gatsby-plugin-google-analytics",
