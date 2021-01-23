@@ -1,7 +1,8 @@
 ---
-title: Hello, World!
-date: 2021-01-19T21:09:48.117Z
 draft: true
+title: Hello, World!
+description: Post inicial que falamos um pouco sobre o que será abordado no blog
+date: 2021-01-19T21:09:48.117Z
 autoThumbnailImage: false
 thumbnailImagePosition: top
 thumbnailImage: /uploads/302-300x300.jpg
