@@ -7,6 +7,8 @@ media_folder: "static/images/uploads"
 public_folder: "/uploads"
 site_url: https://lobodeterno.github.io
 
+publish_mode: editorial_workflow
+
 collections:
 
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -35,12 +37,6 @@ collections:
         name: "date"
         required: false
         widget: "datetime"
-
-      - label: "Esboço"
-        name: "draft"
-        required: false
-        widget: "boolean"
-        default: true
 
       - label: "Catagorias"
         name: "categories"
