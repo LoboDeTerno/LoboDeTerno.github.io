@@ -1,9 +1,45 @@
-import * as React from "react";
+import React, { useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { graphql, useStaticQuery } from "gatsby";
 import LoboSide from "../assets/images/loboside.webp";
+import { SQHome } from "../graphql";
+import PostCard from "../components/PostCard";
 
 const Home: React.FC = () => {
+    const pageData = useStaticQuery<SQHome>(graphql`
+        query Posts {
+            allMdx(
+                sort: { fields: frontmatter___date, order: DESC }
+                limit: 10
+                filter: { frontmatter: { title: { ne: "__dummy__" } } }
+            ) {
+                edges {
+                    node {
+                        slug
+                        id
+                        frontmatter {
+                            autoThumbnailImage
+                            coverImage
+                            date
+                            description
+                            thumbnailImage
+                            thumbnailImagePosition
+                            title
+                            categories
+                            keywords
+                            tags
+                        }
+                    }
+                }
+            }
+        }
+    `);
+
+    const posts = useMemo(() => pageData.allMdx.edges.map((p) => p.node), [
+        pageData,
+    ]);
+
     return (
         <>
             <header className="bg-black text-white">
@@ -58,6 +94,14 @@ const Home: React.FC = () => {
             </section>
             <section>
                 <h3>Publicações</h3>
+                {posts.map((post) => (
+                    <PostCard
+                        key={post.id}
+                        frontmatter={post.frontmatter}
+                        slug={post.slug}
+                        id={post.id}
+                    />
+                ))}
             </section>
             <footer className="bg-black text-white text-center text-xs py-8">
                 ©2021 Lobo de Terno. Developed with much{" "}

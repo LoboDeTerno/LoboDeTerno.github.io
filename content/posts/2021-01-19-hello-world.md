@@ -1,5 +1,4 @@
 ---
-draft: true
 title: Hello, World!
 description: Post inicial que falamos um pouco sobre o que será abordado no blog
 date: 2021-01-19T21:09:48.117Z
