@@ -12,6 +12,6 @@
         "noUnusedLocals": false,
         "allowJs": true
     },
-    "include": ["src", "gatsby-browser.js"],
+    "include": ["src/**/*", "gatsby-browser.js"],
     "exclude": ["node_modules", "public", ".cache"]
 }

@@ -3,7 +3,7 @@ backend:
   repo: LoboDeTerno/LoboDeTerno.github.io
   branch: master
 
-media_folder: "static/imgages/uploads"
+media_folder: "static/images/uploads"
 public_folder: "/uploads"
 site_url: https://lobodeterno.github.io
 
@@ -23,6 +23,12 @@ collections:
 
       - label: "Título"
         name: "title"
+        widget: "string"
+
+      - label: "Descrição"
+        name: "description"
+        required: false
+        hint: "Resumo sobre o que é falado no post."
         widget: "string"
 
       - label: "Data de Publicação"

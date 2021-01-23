@@ -24,7 +24,12 @@ module.exports = {
                 icon: "src/assets/images/icon.png",
             },
         },
-        "gatsby-plugin-mdx",
+        {
+            resolve: "gatsby-plugin-mdx",
+            options: {
+                extensions: [`.mdx`, `.md`],
+            },
+        },
         "gatsby-transformer-sharp",
         {
             resolve: "gatsby-source-filesystem",
@@ -41,6 +46,14 @@ module.exports = {
                 path: "./src/pages/",
             },
             __key: "pages",
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "posts",
+                path: "./content/posts/",
+            },
+            __key: "posts",
         },
     ],
 };
